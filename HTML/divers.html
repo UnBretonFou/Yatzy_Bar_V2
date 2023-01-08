@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../CSS/styles.css">
+        <meta charset="UTF-8">
+        <title> Bienvenu au Yatzy Bar ! </title>
+    </head>
+    
+    <body>
+        <!-- Début haut de page -->
+        <header><img class="img-header" src="../ASSETS/image/Yatzy_Bar.jpg" ></header>
+        <!-- Fin haut de page -->
+        <!-- Début page d'acceuil -->
+        <nav class="nav-bar">
+            <ul>
+                <li class="categorie">
+                    <a href="../HTML/page_2.html" target="_top"> ENTRER </a>
+                </li>
+                <li class="categorie">
+                    <a href="../ASSETS/vidéo/easter_egg.mp4" target="_blank"> . </a>
+                </li>
+                <li class="categorie">
+                    <a class="resultat" href="https://www.associationdesbarmendefrance.fr/nos-recettes-cocktails" target="_blank"> COCKTAIL DU MOIS</a>
+                </li>
+            </ul>
+        </nav> 
+        <video id="video" src="../ASSETS/vidéo/cocktail_1.mp4"  autoplay muted>
+            <script>
+              const video = document.getElementById("video");
+              const videos = ["../ASSETS/vidéo/cocktail_2.mp4", "../ASSETS/vidéo/cocktail_3.mp4", "../ASSETS/vidéo/cocktail_4.mp4", "../ASSETS/vidéo/cocktail_5.mp4", "../ASSETS/vidéo/cocktail_6.mp4", "../ASSETS/vidéo/cocktail_7.mp4", "../ASSETS/vidéo/cocktail_8.mp4"];
+            
+              let currentVideoIndex = 0;
+              function changeVideo() {
+                if(currentVideoIndex >= videos.length) currentVideoIndex = 0;
+                video.src = videos[currentVideoIndex++];
+                video.play();
+              }
+          
+              video.addEventListener("ended", changeVideo);
+            </script>
+        </video>
+        <div id="nous-contacter">
+            <a href="../HTML/nous_contacter.html" target="_blank"> Nous contacter </a>
+        </div>
+        <!-- Fin page d'accueil -->
+        <!-- Début pied de page -->
+        <footer>
+            <div class="copyright">
+                <p> Copyright &copy; Yann Krasinski & Corentin Lafranche - 2022/2023</p>
+            </div>
+        </footer>
+        <!-- Fin pied de page -->
+    </body>
+
+
+
+</html>
